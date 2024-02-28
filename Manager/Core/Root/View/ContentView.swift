@@ -18,9 +18,10 @@ struct ContentView: View {
                     LoginView()
                 }
             }
-            .edgesIgnoringSafeArea(.all)
+            
+            
         }
-        .padding()
+        .edgesIgnoringSafeArea(.all)
     }
 }
 

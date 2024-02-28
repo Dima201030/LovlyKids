@@ -10,6 +10,7 @@ import PhotosUI
 
 struct ProfileView: View {
     @StateObject var viewModel = ProfileViewModel()
+    
     let user: User
     var body: some View {
         VStack {
@@ -31,6 +32,7 @@ struct ProfileView: View {
                 Text(user.fullname)
                     .font(.title2)
                     .fontWeight(.semibold)
+                    .multilineTextAlignment(.center)
             }
             List {
                 Section {

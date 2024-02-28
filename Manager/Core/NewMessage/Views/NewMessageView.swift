@@ -9,6 +9,8 @@ import SwiftUI
 
 struct NewMessageView: View {
     @State private var searchText = ""
+    @StateObject private var viewModel = NewMessangeViewModel()
+    @Binding var selectedUser: User?
     @Environment(\.dismiss) var dismiss
     var body: some View {
         NavigationStack{
@@ -23,11 +25,12 @@ struct NewMessageView: View {
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding()
                 
-                ForEach(0...10, id: \.self) { user in
+                ForEach(viewModel.users) { user in
                     VStack {
                         HStack {
-                            CircularProfileImageView(user: User.MOCK_USER, size: .xSmall)
-                            Text("Dima")
+                            CircularProfileImageView(user: user, size: .xSmall)
+                            
+                            Text(user.fullname)
                                 .font(.subheadline)
                                 .fontWeight(.semibold)
                             
@@ -37,8 +40,13 @@ struct NewMessageView: View {
                         Divider()
                             .padding(.leading, 40)
                     }
+                    .onTapGesture {
+                        selectedUser = user
+                        dismiss()
+                    }
                 }
             }
+            
             .navigationTitle("New Message")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
@@ -55,5 +63,5 @@ struct NewMessageView: View {
 }
 
 #Preview {
-    NewMessageView()
+    NewMessageView(selectedUser: .constant(User.MOCK_USER))
 }
