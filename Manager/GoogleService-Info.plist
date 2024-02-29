@@ -9,7 +9,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>CoreNot.com.Manager</string>
+	<string>com.coreNot.Lovly-Kids</string>
 	<key>PROJECT_ID</key>
 	<string>messanger-8c488</string>
 	<key>STORAGE_BUCKET</key>
@@ -25,6 +25,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:126039075348:ios:f965fe06e11ce470295501</string>
+	<string>1:126039075348:ios:45cbf30f38413a7e295501</string>
 </dict>
 </plist>
