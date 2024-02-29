@@ -10,6 +10,7 @@ import SwiftUI
 import PhotosUI
 
 class ProfileViewModel: ObservableObject {
+
     @Published var selectItme: PhotosPickerItem? {
         didSet { Task { try await loadImage() }}
     }

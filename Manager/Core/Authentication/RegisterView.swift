@@ -69,6 +69,9 @@ struct RegistrationView: View {
                     .cornerRadius(10)
                 
             }
+            .alert(isPresented: $viewModel.showAlert, content: {
+                Alert(title: Text(viewModel.alertTitle), message: Text(viewModel.alertMessage))
+            })
             .padding(.vertical)
             
             Spacer()

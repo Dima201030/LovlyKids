@@ -42,32 +42,7 @@ struct ProfileView: View {
                 }
                 
             }
-            List {
-                Section {
-                    ForEach(SettingsOptionsViewModel.allCases, id: \.self) { option in
-                        HStack {
-                            Image(systemName: "\(option.imageName)")
-                                .resizable()
-                                .frame(width: 24, height: 24)
-                                .foregroundColor(option.imageBackgroundColor)
-                            
-                            Text("\(option.title)")
-                                .font(.subheadline)
-                            
-                        }
-                    }
-                }
-                Section {
-                    Button("Log Out") {
-                        AuthService.shared.singOut()
-                    }
-                    
-                    Button("Delete Account") {
-                        
-                    }
-                }
-                .foregroundColor(.red)
-            }
+            
         }
     }
 }
