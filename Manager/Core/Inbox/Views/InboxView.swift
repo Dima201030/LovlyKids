@@ -18,24 +18,38 @@ struct InboxView: View {
     }
     var body: some View {
         NavigationStack {
-            ScrollView {
+           
+            List {
                 ActiveNowView()
-                List {
-                    ForEach( 0...10, id: \.self ) { message in
-                        InboxRootNew()
+                    .listRowSeparator(.hidden)
+                    .listRowInsets(EdgeInsets())
+                    .padding(.vertical)
+                    .padding(.horizontal, 4)
+                ForEach(viewModel.recentMessages) { message in
+                    ZStack {
+                        NavigationLink(value: message) {
+                            EmptyView()
+                        }.opacity(0.0)
+                        
+                        InboxRootNew(message: message)
                     }
                 }
-                .listStyle(PlainListStyle())
-                .frame(height: UIScreen.main.bounds.height - 120)
             }
-            .onChange(of: selectedUser, perform: { newValue in
-                showChat = newValue != nil
-            })
+            .listStyle(PlainListStyle())
+            
             .navigationDestination(for: User.self, destination: { user in
                 ProfileView(user: user)
             })
             .navigationDestination(isPresented: $showChat, destination: {
                 if let user = selectedUser {
+                    ChatView(user: user)
+                }
+            })
+            .onChange(of: selectedUser, perform: { newValue in
+                showChat = newValue != nil
+            })
+            .navigationDestination(for: Message.self, destination: { message in
+                if let user = message.user {
                     ChatView(user: user)
                 }
             })
@@ -52,11 +66,16 @@ struct InboxView: View {
                         Text("Chats")
                             .font(.title)
                             .fontWeight(.semibold)
+                        
+                        Button("Change"){
+                            print("DEBUG: \(viewModel.recentMessages)")
+                        }
                     }
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
                         showNewMessageView.toggle()
+                        self.selectedUser = nil
                     } label: {
                         Image(systemName: "square.and.pencil.circle.fill")
                             .resizable()

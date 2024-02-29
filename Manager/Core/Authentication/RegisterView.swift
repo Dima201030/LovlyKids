@@ -45,10 +45,21 @@ struct RegistrationView: View {
                     .cornerRadius(10)
                     .padding(.horizontal, 24)
             }
+            VStack {
+                Picker("Age", selection: $viewModel.age) {
+                    ForEach(0 ..< 100, id: \.self) { index in
+                        Text("\(index)")
+                    }
+                }
+            }
+
             
             
             
-            Button(action: { Task { try await viewModel.createUser() }} ) {
+            Button(action: {
+                Task { try await viewModel.createUser() } 
+                print("\(viewModel.age)")
+            } ) {
                 Text("Sign Up")
                     .font(.subheadline)
                     .fontWeight(.semibold)

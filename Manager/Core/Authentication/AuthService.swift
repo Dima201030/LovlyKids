@@ -33,12 +33,12 @@ class AuthService {
     }
     
     @MainActor
-    func createUser(withEmail email: String, password: String, fullname: String) async throws {
+    func createUser(withEmail email: String, password: String, fullname: String, age: Int) async throws {
         do {
             let result = try await Auth.auth().createUser(withEmail: email, password: password)
             print("DEBUG: Create user \(result.user.uid)")
             self.userSession = result.user
-            try await self.uploadUserData(email: email, fullname: fullname, id: result.user.uid)
+            try await self.uploadUserData(email: email, fullname: fullname, id: result.user.uid, age: age)
             loadCurrentUserData()
         } catch {
             print("DEBUG: Failed to create user with error: \(error.localizedDescription)")
@@ -53,8 +53,8 @@ class AuthService {
             print("DEBUG: Failed to sign out wit error \(error.localizedDescription)")
         }
     }
-    private func uploadUserData(email: String, fullname: String, id: String) async throws {
-        let user = User(fullname: fullname, email: email, profileImageUrl: nil)
+    private func uploadUserData(email: String, fullname: String, id: String, age: Int) async throws {
+        let user = User(fullname: fullname, email: email, age: age, profileImageUrl: nil)
         guard let encodedUser = try? Firestore.Encoder().encode(user) else { return }
         try await Firestore.firestore().collection("users").document(id).setData(encodedUser)
         

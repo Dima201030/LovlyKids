@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81669EC32B90B38200239696 /* ChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81669EC22B90B38200239696 /* ChatService.swift */; };
+		81669EC62B90B4BF00239696 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81669EC52B90B4BF00239696 /* Constants.swift */; };
+		81669EC92B90C86900239696 /* InboxService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81669EC82B90C86900239696 /* InboxService.swift */; };
+		81669ECB2B90D50500239696 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81669ECA2B90D50500239696 /* Date.swift */; };
+		81680E8F2B90935300EF60A3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81680E8E2B90935200EF60A3 /* GoogleService-Info.plist */; };
+		81680E932B909AD100EF60A3 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81680E922B909AD100EF60A3 /* Message.swift */; };
+		81680E952B909C0F00EF60A3 /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81680E942B909C0F00EF60A3 /* MessageService.swift */; };
+		81680E992B909F1800EF60A3 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81680E982B909F1800EF60A3 /* ChatViewModel.swift */; };
 		816CC09F2B88E8900056433C /* ManagerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816CC09E2B88E8900056433C /* ManagerApp.swift */; };
 		816CC0A12B88E8900056433C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816CC0A02B88E8900056433C /* ContentView.swift */; };
 		816CC0A32B88E8920056433C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 816CC0A22B88E8920056433C /* Assets.xcassets */; };
@@ -25,7 +33,6 @@
 		816CC0D82B8911BA0056433C /* ChatMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816CC0D52B8911BA0056433C /* ChatMessageCell.swift */; };
 		816CC0D92B8911BA0056433C /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816CC0D62B8911BA0056433C /* ChatView.swift */; };
 		816CC0DA2B8911BA0056433C /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816CC0D72B8911BA0056433C /* ChatBubble.swift */; };
-		816CC0DE2B8914E30056433C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 816CC0DD2B8914E30056433C /* GoogleService-Info.plist */; };
 		816CC1112B8918B20056433C /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816CC1102B8918B20056433C /* LoginViewModel.swift */; };
 		816CC1142B8918E30056433C /* RegistredViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816CC1132B8918E30056433C /* RegistredViewModel.swift */; };
 		816CC1162B8919080056433C /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816CC1152B8919080056433C /* AuthService.swift */; };
@@ -65,7 +72,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		816CC09B2B88E8900056433C /* Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Manager.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		81669EC22B90B38200239696 /* ChatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatService.swift; sourceTree = "<group>"; };
+		81669EC52B90B4BF00239696 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		81669EC82B90C86900239696 /* InboxService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxService.swift; sourceTree = "<group>"; };
+		81669ECA2B90D50500239696 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Date.swift; path = Manager/Core/Inbox/Service/Date.swift; sourceTree = SOURCE_ROOT; };
+		81680E8E2B90935200EF60A3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		81680E922B909AD100EF60A3 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		81680E942B909C0F00EF60A3 /* MessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
+		81680E982B909F1800EF60A3 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		816CC09B2B88E8900056433C /* Lovly Kids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lovly Kids.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		816CC09E2B88E8900056433C /* ManagerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerApp.swift; sourceTree = "<group>"; };
 		816CC0A02B88E8900056433C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		816CC0A22B88E8920056433C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -84,7 +99,6 @@
 		816CC0D52B8911BA0056433C /* ChatMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessageCell.swift; sourceTree = "<group>"; };
 		816CC0D62B8911BA0056433C /* ChatView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		816CC0D72B8911BA0056433C /* ChatBubble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
-		816CC0DD2B8914E30056433C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		816CC1102B8918B20056433C /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		816CC1132B8918E30056433C /* RegistredViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistredViewModel.swift; sourceTree = "<group>"; };
 		816CC1152B8919080056433C /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
@@ -134,6 +148,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		81669EC12B90B36900239696 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				81669EC22B90B38200239696 /* ChatService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		81669EC42B90B4A300239696 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				81669EC52B90B4BF00239696 /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		81669EC72B90C85500239696 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				81669EC82B90C86900239696 /* InboxService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		81680E962B909EF500EF60A3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				816CC0D62B8911BA0056433C /* ChatView.swift */,
+				816CC0D52B8911BA0056433C /* ChatMessageCell.swift */,
+				816CC0D72B8911BA0056433C /* ChatBubble.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		81680E972B909F0100EF60A3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				81680E982B909F1800EF60A3 /* ChatViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		816CC0922B88E8900056433C = {
 			isa = PBXGroup;
 			children = (
@@ -145,7 +201,7 @@
 		816CC09C2B88E8900056433C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				816CC09B2B88E8900056433C /* Manager.app */,
+				816CC09B2B88E8900056433C /* Lovly Kids.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -153,12 +209,13 @@
 		816CC09D2B88E8900056433C /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				816CC0DD2B8914E30056433C /* GoogleService-Info.plist */,
+				81680E8E2B90935200EF60A3 /* GoogleService-Info.plist */,
 				816CC0B02B88E8EE0056433C /* App */,
 				816CC0AF2B88E8E90056433C /* Core */,
+				816CC0AC2B88E8D80056433C /* Extension */,
 				816CC0AE2B88E8E20056433C /* Model */,
 				816CC0AD2B88E8E00056433C /* Service */,
-				816CC0AC2B88E8D80056433C /* Extension */,
+				81669EC42B90B4A300239696 /* Utils */,
 				816CC0A22B88E8920056433C /* Assets.xcassets */,
 				816CC0A42B88E8920056433C /* Preview Content */,
 			);
@@ -176,6 +233,7 @@
 		816CC0AC2B88E8D80056433C /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				81669ECA2B90D50500239696 /* Date.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -184,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				816D93EB2B8D02CA00EF1AF7 /* UserService.swift */,
+				81680E942B909C0F00EF60A3 /* MessageService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -192,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				816CC0CF2B89039E0056433C /* User.swift */,
+				81680E922B909AD100EF60A3 /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -250,6 +310,7 @@
 		816CC0BA2B88F0AD0056433C /* Inbox */ = {
 			isa = PBXGroup;
 			children = (
+				81669EC72B90C85500239696 /* Service */,
 				816D93EE2B8D089400EF1AF7 /* ViewModel */,
 				816D93ED2B8D088E00EF1AF7 /* Views */,
 			);
@@ -310,9 +371,9 @@
 		816CC0D42B8911BA0056433C /* Chat */ = {
 			isa = PBXGroup;
 			children = (
-				816CC0D62B8911BA0056433C /* ChatView.swift */,
-				816CC0D52B8911BA0056433C /* ChatMessageCell.swift */,
-				816CC0D72B8911BA0056433C /* ChatBubble.swift */,
+				81669EC12B90B36900239696 /* Service */,
+				81680E972B909F0100EF60A3 /* ViewModel */,
+				81680E962B909EF500EF60A3 /* Views */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -386,9 +447,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		816CC09A2B88E8900056433C /* Manager */ = {
+		816CC09A2B88E8900056433C /* Lovly Kids */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 816CC0A92B88E8920056433C /* Build configuration list for PBXNativeTarget "Manager" */;
+			buildConfigurationList = 816CC0A92B88E8920056433C /* Build configuration list for PBXNativeTarget "Lovly Kids" */;
 			buildPhases = (
 				816CC0972B88E8900056433C /* Sources */,
 				816CC0982B88E8900056433C /* Frameworks */,
@@ -398,7 +459,7 @@
 			);
 			dependencies = (
 			);
-			name = Manager;
+			name = "Lovly Kids";
 			packageProductDependencies = (
 				816D93F12B8D1A7600EF1AF7 /* FirebaseAnalytics */,
 				816D93F32B8D1A7600EF1AF7 /* FirebaseAnalyticsOnDeviceConversion */,
@@ -431,7 +492,7 @@
 				816D94292B8D1ACF00EF1AF7 /* FirebaseStorageCombine-Community */,
 			);
 			productName = Manager;
-			productReference = 816CC09B2B88E8900056433C /* Manager.app */;
+			productReference = 816CC09B2B88E8900056433C /* Lovly Kids.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -449,7 +510,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 816CC0962B88E8900056433C /* Build configuration list for PBXProject "Manager" */;
+			buildConfigurationList = 816CC0962B88E8900056433C /* Build configuration list for PBXProject "Lovly Kids" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -465,7 +526,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				816CC09A2B88E8900056433C /* Manager */,
+				816CC09A2B88E8900056433C /* Lovly Kids */,
 			);
 		};
 /* End PBXProject section */
@@ -475,7 +536,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				816CC0DE2B8914E30056433C /* GoogleService-Info.plist in Resources */,
+				81680E8F2B90935300EF60A3 /* GoogleService-Info.plist in Resources */,
 				816CC0A62B88E8920056433C /* Preview Assets.xcassets in Resources */,
 				816CC0A32B88E8920056433C /* Assets.xcassets in Resources */,
 			);
@@ -488,6 +549,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81680E992B909F1800EF60A3 /* ChatViewModel.swift in Sources */,
+				81669ECB2B90D50500239696 /* Date.swift in Sources */,
 				816CC0B52B88E9A50056433C /* LoginView.swift in Sources */,
 				816D93F02B8D08C900EF1AF7 /* InboxViewModel.swift in Sources */,
 				816CC0C92B88FD940056433C /* ProfileView.swift in Sources */,
@@ -498,17 +561,22 @@
 				816CC0BC2B88F0E60056433C /* InboxView.swift in Sources */,
 				81D3ED412B8E3AFA004BF099 /* NewMessangeViewModel.swift in Sources */,
 				816CC1162B8919080056433C /* AuthService.swift in Sources */,
+				81669EC92B90C86900239696 /* InboxService.swift in Sources */,
+				81669EC62B90B4BF00239696 /* Constants.swift in Sources */,
 				816CC0BF2B88F2F00056433C /* ActiveNowView.swift in Sources */,
 				816CC0DA2B8911BA0056433C /* ChatBubble.swift in Sources */,
 				816CC0D92B8911BA0056433C /* ChatView.swift in Sources */,
+				81669EC32B90B38200239696 /* ChatService.swift in Sources */,
 				816CC0CE2B8901870056433C /* ProfileViewModel.swift in Sources */,
 				816CC1112B8918B20056433C /* LoginViewModel.swift in Sources */,
 				816CC0D02B89039E0056433C /* User.swift in Sources */,
 				816D93EC2B8D02CA00EF1AF7 /* UserService.swift in Sources */,
 				816CC1142B8918E30056433C /* RegistredViewModel.swift in Sources */,
+				81680E952B909C0F00EF60A3 /* MessageService.swift in Sources */,
 				816CC0A12B88E8900056433C /* ContentView.swift in Sources */,
 				816CC0D82B8911BA0056433C /* ChatMessageCell.swift in Sources */,
 				816CC0D32B8907780056433C /* CircleProfileImageView.swift in Sources */,
+				81680E932B909AD100EF60A3 /* Message.swift in Sources */,
 				816CC0CC2B88FF580056433C /* SettingsOptionsViewModel.swift in Sources */,
 				816CC09F2B88E8900056433C /* ManagerApp.swift in Sources */,
 			);
@@ -657,7 +725,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = CoreNot.com.Manager;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.coreNot.Lovly-Kids";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -688,7 +756,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = CoreNot.com.Manager;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.coreNot.Lovly-Kids";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -701,7 +769,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		816CC0962B88E8900056433C /* Build configuration list for PBXProject "Manager" */ = {
+		816CC0962B88E8900056433C /* Build configuration list for PBXProject "Lovly Kids" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				816CC0A72B88E8920056433C /* Debug */,
@@ -710,7 +778,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		816CC0A92B88E8920056433C /* Build configuration list for PBXNativeTarget "Manager" */ = {
+		816CC0A92B88E8920056433C /* Build configuration list for PBXNativeTarget "Lovly Kids" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				816CC0AA2B88E8920056433C /* Debug */,

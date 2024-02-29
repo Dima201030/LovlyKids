@@ -19,7 +19,7 @@ struct ProfileView: View {
                     if let profileImage = viewModel.profileImage {
                         profileImage
                             .resizable()
-                            .frame(width: 100, height: 100)
+                            .frame(width: 120, height: 120)
                             .foregroundColor(Color(.systemGray4))
                             .scaledToFill()
                             .clipShape(Circle())
@@ -29,10 +29,18 @@ struct ProfileView: View {
                 }
                 
                 
-                Text(user.fullname)
-                    .font(.title2)
-                    .fontWeight(.semibold)
-                    .multilineTextAlignment(.center)
+                VStack {
+                    Text(user.fullname)
+                        .font(.title2)
+                        .fontWeight(.semibold)
+                        .multilineTextAlignment(.center)
+                    
+                    Text("\(user.age)")
+                        .font(.subheadline)
+                        .fontWeight(.light)
+                        .multilineTextAlignment(.center)
+                }
+                
             }
             List {
                 Section {
