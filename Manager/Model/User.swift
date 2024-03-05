@@ -7,7 +7,10 @@
 
 import Foundation
 import FirebaseFirestoreSwift
+import SwiftUI
+
 struct User: Codable, Identifiable, Hashable {
+    
     @DocumentID var uid: String?
     let fullname: String
     let email: String
@@ -16,6 +19,28 @@ struct User: Codable, Identifiable, Hashable {
     
     var id: String {
         return uid ?? NSUUID().uuidString
+    }
+}
+
+struct AppData {
+    var appearance: ColorScheme = .light
+    
+    init() {
+        self.appearance = getColorScheme()
+    }
+    
+    mutating func saveColorScheme() {
+        let defaults = UserDefaults.standard
+        defaults.set(appearance == .dark ? "dark" : "light", forKey: "colorScheme")
+    }
+    
+    private func getColorScheme() -> ColorScheme {
+        let defaults = UserDefaults.standard
+        if let rawValue = defaults.string(forKey: "colorScheme") {
+            return rawValue == "dark" ? .dark : .light
+        } else {
+            return .light
+        }
     }
 }
 

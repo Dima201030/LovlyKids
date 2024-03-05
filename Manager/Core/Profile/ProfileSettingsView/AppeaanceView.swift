@@ -8,8 +8,27 @@
 import SwiftUI
 
 struct AppeaanceView: View {
+    @State private var appData = AppData()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Toggle(isOn: Binding<Bool>(
+                get: {
+                    return appData.appearance == .dark
+                },
+                set: { newValue in
+                    appData.appearance = newValue ? .dark : .light
+                    appData.saveColorScheme()
+                }
+            )) {
+                Text("Темная тема")
+            }
+            .padding()
+            
+            Text("Текущая цветовая схема: \(appData.appearance == .dark ? "Темная" : "Светлая")")
+                .padding()
+        }
+        .colorScheme(appData.appearance)
     }
 }
 

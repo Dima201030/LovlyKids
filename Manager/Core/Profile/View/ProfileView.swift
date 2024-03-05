@@ -18,7 +18,7 @@ struct ProfileView: View {
     var body: some View {
         NavigationView {
             VStack {
-                if let profileImage = viewModel.profileImage {
+                if viewModel.profileImage != nil {
                     Image(user.profileImageUrl ?? "")
                         .resizable()
                         .frame(width: 120, height: 120)
@@ -37,12 +37,23 @@ struct ProfileView: View {
                         }
                     }
                     Section {
-                        Button {
-                            <#code#>
-                        } label: {
-                            Text("Privicy")
+                        ForEach(SettingsProfileEnum.allCases){ options in
+                            NavigationLink {
+                                PrivacyView()
+                            } label: {
+                                HStack {
+                                    Image(systemName: "\(options.imageUrl)")
+                                    Text("\(options.title)")
+                                }
+                            }
                         }
 
+                    }
+                    Section {
+                        Button(action: {AuthService.shared.deleteUser()}) {
+                            Text("Delete account")
+                                .foregroundColor(.red)
+                        }
                     }
                 }
                 

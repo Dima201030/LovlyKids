@@ -55,11 +55,6 @@ struct SettingsView: View {
                         Text("Log out")
                             .foregroundColor(.red)
                     }
-                    Button(action: {AuthService.shared.deleteUser()}) {
-                        Text("Delete account")
-                            .foregroundColor(.red)
-                    }
-                    
                 }
             }
             .navigationTitle("Settings")

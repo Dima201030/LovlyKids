@@ -13,7 +13,6 @@ enum SettingsOptionsViewModel: Int, CaseIterable, Identifiable {
     
     
     case Appearance
-    case Privacy
     case Language
     case Notification
     
@@ -24,8 +23,6 @@ enum SettingsOptionsViewModel: Int, CaseIterable, Identifiable {
             return NSLocalizedString("Language", comment: "")
         case .Appearance:
             return NSLocalizedString("Appearance", comment: "")
-        case .Privacy:
-            return NSLocalizedString("Privacy", comment: "")
         case .Notification:
             return NSLocalizedString("Notification", comment: "")
         }
@@ -37,8 +34,6 @@ enum SettingsOptionsViewModel: Int, CaseIterable, Identifiable {
             return "signature"
         case .Appearance:
             return "pencil.and.scribble"
-        case .Privacy:
-            return "lock.fill"
         case .Notification:
             return "message.fill"
         }
@@ -47,8 +42,6 @@ enum SettingsOptionsViewModel: Int, CaseIterable, Identifiable {
     var destinationView: some View {
         switch self {
         case .Appearance:
-            return EmptyView()
-        case .Privacy:
             return EmptyView()
         case .Language:
             return EmptyView()
