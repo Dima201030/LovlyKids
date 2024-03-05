@@ -15,7 +15,6 @@ enum SettingsProfileEnum: Int, CaseIterable, Identifiable {
     
     case privacy
     
-    
     var title: String {
         switch self {
         case .privacy:

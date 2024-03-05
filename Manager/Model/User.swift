@@ -22,14 +22,14 @@ struct User: Codable, Identifiable, Hashable {
     }
 }
 
-struct AppData {
-    var appearance: ColorScheme = .light
+class AppData: ObservableObject {
+    @Published var appearance: ColorScheme = .light
     
     init() {
         self.appearance = getColorScheme()
     }
     
-    mutating func saveColorScheme() {
+    func saveColorScheme() {
         let defaults = UserDefaults.standard
         defaults.set(appearance == .dark ? "dark" : "light", forKey: "colorScheme")
     }

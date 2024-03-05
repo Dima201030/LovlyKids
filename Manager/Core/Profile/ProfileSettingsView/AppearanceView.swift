@@ -7,32 +7,35 @@
 
 import SwiftUI
 
-struct AppeaanceView: View {
-    @EnvironmentObject private var appData: AppData
-    
+struct AppearanceView: View {
+    @EnvironmentObject var appData: AppData
+
     var body: some View {
-        VStack {
-            Toggle(isOn: Binding<Bool>(
-                get: {
-                    return appData.appearance == .dark
-                },
-                set: { newValue in
-                    appData.appearance = newValue ? .dark : .light
-                    appData.saveColorScheme()
+        NavigationStack {
+            VStack {
+                Toggle(isOn: Binding<Bool>(
+                    get: {
+                        return appData.appearance == .dark
+                    },
+                    set: { newValue in
+                        appData.appearance = newValue ? .dark : .light
+                        appData.saveColorScheme()
+                    }
+                )) {
+                    Text("Темная тема")
                 }
-            )) {
-                Text("Темная тема")
-            }
-            .padding()
-            
-            Text("Текущая цветовая схема: \(appData.appearance == .dark ? "Темная" : "Светлая")")
                 .padding()
+                
+                Text("Текущая цветовая схема: \(appData.appearance == .dark ? "Темная" : "Светлая")")
+                    .padding()
+            }
         }
-        .colorScheme(appData.appearance)
     }
 }
 
-#Preview {
-    AppeaanceView()
-        .environmentObject(AppData())
+struct AppearanceView_Previews: PreviewProvider {
+    static var previews: some View {
+        AppearanceView()
+            .environmentObject(AppData())
+    }
 }

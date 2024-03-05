@@ -13,7 +13,7 @@ struct ProfileView: View {
     @State private var fullname = ""
     @State private var age = ""
     @State private var showSheet = false
-    
+    @EnvironmentObject var appData: AppData
     let user: User
     var body: some View {
         NavigationView {
@@ -58,8 +58,11 @@ struct ProfileView: View {
                 }
                 
             }
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationTitle("Profile")
             .sheet(isPresented: $showSheet, content: {
                 EditPrivaryInfo(user: user)
+                    .environmentObject(AppData())
             })
         }
     }
@@ -68,4 +71,6 @@ struct ProfileView: View {
 
 #Preview {
     ProfileView(user: User.MOCK_USER)
+        .environmentObject(AppData())
+
 }

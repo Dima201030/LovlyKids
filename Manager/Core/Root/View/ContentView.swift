@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject var viewModel = ContentViewModel()
+    @EnvironmentObject var appData: AppData
     var body: some View {
             VStack {
                 Group {
@@ -48,4 +49,5 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
+        .environmentObject(AppData())
 }

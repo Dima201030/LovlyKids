@@ -12,6 +12,7 @@ struct InboxView: View {
     @StateObject var viewModel = InboxViewModel()
     @State private var selectedUser: User?
     @State private var showChat = false
+    @EnvironmentObject var appData: AppData
     
     private var user: User? {
         return viewModel.currentUser
@@ -20,11 +21,6 @@ struct InboxView: View {
         NavigationStack {
            
             List {
-                ActiveNowView()
-                    .listRowSeparator(.hidden)
-                    .listRowInsets(EdgeInsets())
-                    .padding(.vertical)
-                    .padding(.horizontal, 4)
                 ForEach(viewModel.recentMessages) { message in
                     ZStack {
                         NavigationLink(value: message) {
@@ -51,6 +47,7 @@ struct InboxView: View {
             })
             .fullScreenCover(isPresented: $showNewMessageView) {
                 NewMessageView(selectedUser: $selectedUser)
+                    .environment(\.colorScheme, appData.appearance)
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
@@ -79,4 +76,5 @@ struct InboxView: View {
 
 #Preview {
     InboxView()
+        .environmentObject(AppData())
 }

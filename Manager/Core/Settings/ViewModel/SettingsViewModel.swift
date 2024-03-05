@@ -1,21 +1,11 @@
-//
-//  SettingsViewModel.swift
-//  Lovly Kids
-//
-//  Created by Дима Кожемякин on 29.02.2024.
-//
-
 import Foundation
 import SwiftUI
 
-
 enum SettingsOptionsViewModel: Int, CaseIterable, Identifiable {
-    
     
     case Appearance
     case Language
     case Notification
-    
     
     var title: String {
         switch self {
@@ -42,11 +32,11 @@ enum SettingsOptionsViewModel: Int, CaseIterable, Identifiable {
     var destinationView: some View {
         switch self {
         case .Appearance:
-            return EmptyView()
+            return AnyView(AppearanceView())
         case .Language:
-            return EmptyView()
+            return AnyView(EmptyView())
         case .Notification:
-            return EmptyView()
+            return AnyView(EmptyView())
         }
     }
     

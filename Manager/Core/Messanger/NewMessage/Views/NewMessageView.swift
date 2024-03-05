@@ -11,6 +11,7 @@ struct NewMessageView: View {
     @State private var searchText = ""
     @StateObject private var viewModel = NewMessangeViewModel()
     @Binding var selectedUser: User?
+    @EnvironmentObject var appData: AppData
     @Environment(\.dismiss) var dismiss
     var body: some View {
         NavigationStack{
@@ -46,7 +47,6 @@ struct NewMessageView: View {
                     }
                 }
             }
-            
             .navigationTitle("New Message")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
@@ -54,9 +54,9 @@ struct NewMessageView: View {
                     Button("Cancle") {
                         dismiss()
                     }
-                    .foregroundColor(.black)
                 }
             }
+            
         }
         
     }
@@ -64,4 +64,6 @@ struct NewMessageView: View {
 
 #Preview {
     NewMessageView(selectedUser: .constant(User.MOCK_USER))
+        .environmentObject(AppData())
+        
 }
