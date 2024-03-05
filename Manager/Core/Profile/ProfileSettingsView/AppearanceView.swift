@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AppeaanceView: View {
-    @State private var appData = AppData()
+    @EnvironmentObject private var appData: AppData
     
     var body: some View {
         VStack {
@@ -34,4 +34,5 @@ struct AppeaanceView: View {
 
 #Preview {
     AppeaanceView()
+        .environmentObject(AppData())
 }
