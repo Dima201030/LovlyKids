@@ -8,21 +8,20 @@
 import Foundation
 import SwiftUI
 
+
 enum SettingsOptionsViewModel: Int, CaseIterable, Identifiable {
     
     
-    case ProfileSettings
     case Appearance
     case Privacy
     case Language
     case Notification
     
+    
     var title: String {
         switch self {
         case .Language:
             return NSLocalizedString("Language", comment: "")
-        case .ProfileSettings:
-            return NSLocalizedString("Profile", comment: "")
         case .Appearance:
             return NSLocalizedString("Appearance", comment: "")
         case .Privacy:
@@ -36,8 +35,6 @@ enum SettingsOptionsViewModel: Int, CaseIterable, Identifiable {
         switch self {
         case .Language:
             return "signature"
-        case .ProfileSettings:
-            return "person.text.rectangle.fill"
         case .Appearance:
             return "pencil.and.scribble"
         case .Privacy:
@@ -50,8 +47,6 @@ enum SettingsOptionsViewModel: Int, CaseIterable, Identifiable {
     var destinationView: some View {
         switch self {
         case .Appearance:
-            return EmptyView()
-        case .ProfileSettings:
             return EmptyView()
         case .Privacy:
             return EmptyView()

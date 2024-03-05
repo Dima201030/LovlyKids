@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct InfoByAppOffical: View {
-    @StateObject private var viewModel = InfoViewModelTexts()
+    @StateObject var viewModel = InfoViewModelTexts()
     var body: some View {
         NavigationStack {
             VStack {
-                Text("\(viewModel.)")
+                Text("\(viewModel.versionFirebase)")
             }
         }
     }

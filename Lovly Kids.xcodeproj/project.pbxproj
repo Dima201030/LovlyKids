@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		812300452B9773EF00DBECB8 /* EditPrivaryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812300442B9773EF00DBECB8 /* EditPrivaryInfo.swift */; };
+		812300492B9775F900DBECB8 /* SettignsProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812300482B9775F900DBECB8 /* SettignsProfileViewModel.swift */; };
 		812C53E52B90E65100483855 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812C53E42B90E65100483855 /* Date.swift */; };
 		812C53E82B91126200483855 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812C53E72B91126200483855 /* MainView.swift */; };
 		812C53EB2B911A9D00483855 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812C53EA2B911A9D00483855 /* SettingsView.swift */; };
 		812C53EF2B911B3C00483855 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812C53EE2B911B3C00483855 /* SettingsViewModel.swift */; };
+		8155C3C72B964282004D77FB /* InfoByAppOffical.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8155C3C62B964282004D77FB /* InfoByAppOffical.swift */; };
+		8155C3CA2B96435C004D77FB /* InfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8155C3C92B96435C004D77FB /* InfoViewModel.swift */; };
 		81669EC32B90B38200239696 /* ChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81669EC22B90B38200239696 /* ChatService.swift */; };
 		81669EC62B90B4BF00239696 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81669EC52B90B4BF00239696 /* Constants.swift */; };
 		81669EC92B90C86900239696 /* InboxService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81669EC82B90C86900239696 /* InboxService.swift */; };
@@ -74,10 +78,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		812300442B9773EF00DBECB8 /* EditPrivaryInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPrivaryInfo.swift; sourceTree = "<group>"; };
+		812300482B9775F900DBECB8 /* SettignsProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettignsProfileViewModel.swift; sourceTree = "<group>"; };
 		812C53E42B90E65100483855 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		812C53E72B91126200483855 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		812C53EA2B911A9D00483855 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		812C53EE2B911B3C00483855 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		8155C3C62B964282004D77FB /* InfoByAppOffical.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoByAppOffical.swift; sourceTree = "<group>"; };
+		8155C3C92B96435C004D77FB /* InfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewModel.swift; sourceTree = "<group>"; };
 		81669EC22B90B38200239696 /* ChatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatService.swift; sourceTree = "<group>"; };
 		81669EC52B90B4BF00239696 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		81669EC82B90C86900239696 /* InboxService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxService.swift; sourceTree = "<group>"; };
@@ -152,6 +160,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		812300462B9775C700DBECB8 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				816CC0CD2B8901870056433C /* ProfileViewModel.swift */,
+				812300482B9775F900DBECB8 /* SettignsProfileViewModel.swift */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		8123004D2B9783EF00DBECB8 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		812C53E62B91124B00483855 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +205,31 @@
 			isa = PBXGroup;
 			children = (
 				812C53EE2B911B3C00483855 /* SettingsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8155C3C82B964330004D77FB /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				8155C3CC2B9645FE004D77FB /* ViewModel */,
+				8155C3CB2B9645FA004D77FB /* View */,
+			);
+			path = Info;
+			sourceTree = "<group>";
+		};
+		8155C3CB2B9645FA004D77FB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8155C3C62B964282004D77FB /* InfoByAppOffical.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8155C3CC2B9645FE004D77FB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8155C3C92B96435C004D77FB /* InfoViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -266,6 +315,7 @@
 			isa = PBXGroup;
 			children = (
 				81680E8E2B90935200EF60A3 /* GoogleService-Info.plist */,
+				8155C3C82B964330004D77FB /* Info */,
 				816CC0B02B88E8EE0056433C /* App */,
 				816CC0AF2B88E8E90056433C /* Core */,
 				816CC0AE2B88E8E20056433C /* Model */,
@@ -384,6 +434,8 @@
 		816CC0C52B88FD570056433C /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				81DBBB252B978443002C6A0A /* New Group1 */,
+				8123004D2B9783EF00DBECB8 /* New Group */,
 				816CC0C72B88FD700056433C /* View */,
 				816CC0C62B88FD640056433C /* Model */,
 			);
@@ -393,7 +445,7 @@
 		816CC0C62B88FD640056433C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				816CC0CD2B8901870056433C /* ProfileViewModel.swift */,
+				812300462B9775C700DBECB8 /* New Group */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -402,6 +454,7 @@
 			isa = PBXGroup;
 			children = (
 				816CC0C82B88FD940056433C /* ProfileView.swift */,
+				812300442B9773EF00DBECB8 /* EditPrivaryInfo.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -488,6 +541,13 @@
 				816CC0C32B88FA340056433C /* NewMessageView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		81DBBB252B978443002C6A0A /* New Group1 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group1";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -601,10 +661,12 @@
 				816D93F02B8D08C900EF1AF7 /* InboxViewModel.swift in Sources */,
 				816CC0C92B88FD940056433C /* ProfileView.swift in Sources */,
 				816CC0C42B88FA340056433C /* NewMessageView.swift in Sources */,
+				8155C3CA2B96435C004D77FB /* InfoViewModel.swift in Sources */,
 				816CC0C12B88F5530056433C /* InboxRootNew.swift in Sources */,
 				816CC11A2B8921C50056433C /* ContentViewModel.swift in Sources */,
 				812C53EF2B911B3C00483855 /* SettingsViewModel.swift in Sources */,
 				816CC0B72B88EF740056433C /* RegisterView.swift in Sources */,
+				812300452B9773EF00DBECB8 /* EditPrivaryInfo.swift in Sources */,
 				816CC0BC2B88F0E60056433C /* InboxView.swift in Sources */,
 				81D3ED412B8E3AFA004BF099 /* NewMessangeViewModel.swift in Sources */,
 				816CC1162B8919080056433C /* AuthService.swift in Sources */,
@@ -620,6 +682,8 @@
 				816D93EC2B8D02CA00EF1AF7 /* UserService.swift in Sources */,
 				816CC1142B8918E30056433C /* RegistredViewModel.swift in Sources */,
 				81680E952B909C0F00EF60A3 /* MessageService.swift in Sources */,
+				812300492B9775F900DBECB8 /* SettignsProfileViewModel.swift in Sources */,
+				8155C3C72B964282004D77FB /* InfoByAppOffical.swift in Sources */,
 				816CC0A12B88E8900056433C /* ContentView.swift in Sources */,
 				812C53EB2B911A9D00483855 /* SettingsView.swift in Sources */,
 				816CC0D82B8911BA0056433C /* ChatMessageCell.swift in Sources */,
@@ -768,6 +832,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -777,9 +842,11 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -799,6 +866,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -808,9 +876,11 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -58,7 +58,6 @@ struct RegistrationView: View {
             
             Button(action: {
                 Task { try await viewModel.createUser() } 
-                print("\(viewModel.age)")
             } ) {
                 Text("Sign Up")
                     .font(.subheadline)

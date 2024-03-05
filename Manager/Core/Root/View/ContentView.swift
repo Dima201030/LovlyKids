@@ -10,7 +10,6 @@ import SwiftUI
 struct ContentView: View {
     @StateObject var viewModel = ContentViewModel()
     var body: some View {
-        NavigationStack {
             VStack {
                 Group {
                     if viewModel.userSession != nil {
@@ -20,12 +19,21 @@ struct ContentView: View {
                                     Label("Main",
                                           systemImage: "house")
                                 }
-                            SettingsView()
+                            InboxView()
                                 .tabItem {
-                                    Label("Settings",
-                                          systemImage: "gear")
+                                    Label("Messanger",
+                                          systemImage: "message"
+                                    )
                                 }
-                        }
+                            NavigationStack {
+                                SettingsView()
+                            }
+                                    .tabItem {
+                                        Label("Settings",
+                                              systemImage: "gear")
+                                    }
+                            }
+                        
                         
                     } else {
                         LoginView()
@@ -33,7 +41,6 @@ struct ContentView: View {
                 }
                 
                 
-            }
             .edgesIgnoringSafeArea(.all)
         }
     }

@@ -8,9 +8,24 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @StateObject var viewModel = InboxViewModel()
+    @Environment(\.dismiss) var dissmis
+    
+    private var user: User? {
+        return viewModel.currentUser
+    }
     var body: some View {
         NavigationStack {
             List {
+                Section(header: Text("Profile")) {
+                    NavigationLink(value: user) {
+                        HStack {
+                            Image(systemName: "person.text.rectangle.fill")
+                            Text("Profile")
+                        }
+                    }
+                    
+                }
                 Section {
                     ForEach(SettingsOptionsViewModel.allCases, id: \.self) { option in
                         NavigationLink(destination: option.destinationView) {
@@ -22,7 +37,36 @@ struct SettingsView: View {
                         }
                     }
                 }
+                Section(header: Text("Info")) {
+                    HStack {
+                        NavigationLink {
+                            InfoByAppOffical()
+                        } label: {
+                            HStack {
+                                Image(systemName: "info")
+                                Text("Info")
+                            }
+                        }
+
+                    }
+                }
+                Section {
+                    Button(action: {AuthService.shared.singOut()}) {
+                        Text("Log out")
+                            .foregroundColor(.red)
+                    }
+                    Button(action: {AuthService.shared.deleteUser()}) {
+                        Text("Delete account")
+                            .foregroundColor(.red)
+                    }
+                    
+                }
             }
+            .navigationTitle("Settings")
+            .navigationDestination(for: User.self, destination: { user in
+                ProfileView(user: user)
+            })
+        
         }
     }
 }

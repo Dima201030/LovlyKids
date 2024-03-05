@@ -10,41 +10,49 @@ import PhotosUI
 
 struct ProfileView: View {
     @StateObject var viewModel = ProfileViewModel()
+    @State private var fullname = ""
+    @State private var age = ""
+    @State private var showSheet = false
     
     let user: User
     var body: some View {
-        VStack {
+        NavigationView {
             VStack {
-                PhotosPicker(selection: $viewModel.selectItme) {
-                    if let profileImage = viewModel.profileImage {
-                        profileImage
-                            .resizable()
-                            .frame(width: 120, height: 120)
-                            .foregroundColor(Color(.systemGray4))
-                            .scaledToFill()
-                            .clipShape(Circle())
-                    } else {
-                        CircularProfileImageView(user: user, size: .max)
+                if let profileImage = viewModel.profileImage {
+                    Image(user.profileImageUrl ?? "")
+                        .resizable()
+                        .frame(width: 120, height: 120)
+                        .foregroundColor(Color(.systemGray4))
+                        .scaledToFill()
+                        .clipShape(Circle())
+                } else {
+                    CircularProfileImageView(user: user, size: .max)
+                }
+                List {
+                    Section {
+                        Button {
+                            showSheet.toggle()
+                        } label: {
+                            Text("Edit Bio")
+                        }
+                    }
+                    Section {
+                        Button {
+                            <#code#>
+                        } label: {
+                            Text("Privicy")
+                        }
+
                     }
                 }
                 
-                
-                VStack {
-                    Text(user.fullname)
-                        .font(.title2)
-                        .fontWeight(.semibold)
-                        .multilineTextAlignment(.center)
-                    
-                    Text("\(user.age)")
-                        .font(.subheadline)
-                        .fontWeight(.light)
-                        .multilineTextAlignment(.center)
-                }
-                
             }
-            
+            .sheet(isPresented: $showSheet, content: {
+                EditPrivaryInfo(user: user)
+            })
         }
     }
+    
 }
 
 #Preview {

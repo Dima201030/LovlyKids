@@ -6,8 +6,8 @@
 //
 
 import Foundation
-import FirebaseCore
+import Firebase
 
-struct InfoViewModelTexts {
-    lazy var versionFirebase = FirebaseApp.version()
+class InfoViewModelTexts: ObservableObject {
+    @Published var versionFirebase = Firebase.FirebaseVersion()
 }

@@ -42,7 +42,7 @@ struct LoginView: View {
                 
                 // forgot password
                 
-                Button(action: { print("Forgot your password ")} ) {
+                Button(action: {} ) {
                     Text("Forgot your password")
                         .font(.footnote)
                         .fontWeight(.semibold)
