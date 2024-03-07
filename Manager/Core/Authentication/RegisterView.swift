@@ -59,7 +59,7 @@ struct RegistrationView: View {
             Button(action: {
                 Task { try await viewModel.createUser() } 
             } ) {
-                Text("Sign Up")
+                Text("Sign In")
                     .font(.subheadline)
                     .fontWeight(.semibold)
                     .foregroundColor(.white)

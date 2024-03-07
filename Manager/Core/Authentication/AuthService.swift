@@ -64,7 +64,7 @@ class AuthService {
             guard let encodedUser = try? Firestore.Encoder().encode(user) else { return }
             try await Firestore.firestore().collection("users").document(id).setData(encodedUser)
         } catch {
-            print("DEBUG: erorr: \(error.localizedDescription)")
+            
         }
     }
     

@@ -41,7 +41,7 @@ struct EditPrivaryInfo: View {
                             .fontWeight(.semibold)
                             .multilineTextAlignment(.center)
                         
-                        TextField("Name", text: $age)
+                        TextField("Age", text: $age)
                             .font(.subheadline)
                             .fontWeight(.light)
                             .multilineTextAlignment(.center)

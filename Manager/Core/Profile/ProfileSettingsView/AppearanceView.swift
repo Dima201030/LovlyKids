@@ -22,11 +22,11 @@ struct AppearanceView: View {
                         appData.saveColorScheme()
                     }
                 )) {
-                    Text("Темная тема")
+                    Text("Dark appearance")
                 }
                 .padding()
                 
-                Text("Текущая цветовая схема: \(appData.appearance == .dark ? "Темная" : "Светлая")")
+                Text("Current color scheme: \(appData.appearance == .dark ? "Dark" : "Light")")
                     .padding()
             }
         }

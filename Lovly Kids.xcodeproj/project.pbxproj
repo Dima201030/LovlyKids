@@ -13,6 +13,7 @@
 		812C53E82B91126200483855 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812C53E72B91126200483855 /* MainView.swift */; };
 		812C53EB2B911A9D00483855 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812C53EA2B911A9D00483855 /* SettingsView.swift */; };
 		812C53EF2B911B3C00483855 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812C53EE2B911B3C00483855 /* SettingsViewModel.swift */; };
+		813ECC332B9A126100157B6E /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 813ECC322B9A126100157B6E /* Localizable.xcstrings */; };
 		8155C3C72B964282004D77FB /* InfoByAppOffical.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8155C3C62B964282004D77FB /* InfoByAppOffical.swift */; };
 		8155C3CA2B96435C004D77FB /* InfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8155C3C92B96435C004D77FB /* InfoViewModel.swift */; };
 		81669EC32B90B38200239696 /* ChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81669EC22B90B38200239696 /* ChatService.swift */; };
@@ -88,6 +89,7 @@
 		812C53E72B91126200483855 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		812C53EA2B911A9D00483855 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		812C53EE2B911B3C00483855 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		813ECC322B9A126100157B6E /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		8155C3C62B964282004D77FB /* InfoByAppOffical.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoByAppOffical.swift; sourceTree = "<group>"; };
 		8155C3C92B96435C004D77FB /* InfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewModel.swift; sourceTree = "<group>"; };
 		81669EC22B90B38200239696 /* ChatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatService.swift; sourceTree = "<group>"; };
@@ -383,6 +385,7 @@
 			isa = PBXGroup;
 			children = (
 				816CC09E2B88E8900056433C /* ManagerApp.swift */,
+				813ECC322B9A126100157B6E /* Localizable.xcstrings */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -627,6 +630,10 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
+				de,
+				"zh-HK",
+				fr,
 			);
 			mainGroup = 816CC0922B88E8900056433C;
 			packageReferences = (
@@ -648,6 +655,7 @@
 			files = (
 				81680E8F2B90935300EF60A3 /* GoogleService-Info.plist in Resources */,
 				816CC0A62B88E8920056433C /* Preview Assets.xcassets in Resources */,
+				813ECC332B9A126100157B6E /* Localizable.xcstrings in Resources */,
 				816CC0A32B88E8920056433C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
